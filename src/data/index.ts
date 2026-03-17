@@ -45,6 +45,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://ecommerceshopycart.netlify.app/",
     github: "https://github.com/abhithaKShaji/E-Commerce-ShopyCart.git",
+    thumbnail: "/src/assets/pro1.png",
     year: "2024",
   }, 
   {
@@ -56,6 +57,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
     github: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
+    thumbnail: "/src/assets/pro2.png",
     year: "2024",
   },
   {
@@ -65,8 +67,9 @@ export const PROJECTS: Project[] = [
     color: "#a78bfa",
     gradient: "from-violet-500/20 to-purple-500/10",
     icon: LuConstruction,
-    live: "#",
-    github: "#",
+    live: "https://brilliant-gumption-4479e4.netlify.app/",
+    github: "https://github.com/abhithaKShaji/ConstructionPage.git",
+    thumbnail: "/src/assets/pro3.png",
     year: "2023",
   },
   {
@@ -78,6 +81,7 @@ export const PROJECTS: Project[] = [
     icon: MdSell,
     live: "https://transcendent-axolotl-14c935.netlify.app/",
     github: "https://github.com/abhithaKShaji/olx-clone.git",
+    thumbnail: "/src/assets/pro4.png",
     year: "2023",
   },
   {
@@ -89,6 +93,7 @@ export const PROJECTS: Project[] = [
     icon: MdMovie,
     live: "https://jocular-boba-7a40df.netlify.app/",
     github: "https://github.com/abhithaKShaji/Netflix-clone.git",
+    thumbnail: "/src/assets/pro5.png",
     year: "2023",
   },
   {
@@ -100,6 +105,7 @@ export const PROJECTS: Project[] = [
     icon: LuSchool,
     live: "https://frolicking-kitten-2c1c14.netlify.app/",
     github: "https://github.com/abhithaKShaji/LandingPage.git",
+    thumbnail: "/src/assets/pro6.png",
     year: "2022",
   },
 ];

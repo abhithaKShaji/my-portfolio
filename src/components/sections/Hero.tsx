@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HERO_ROLES, TECH_ORBIT, SOCIAL_LINKS } from "../../data";
+import { HERO_ROLES, SOCIAL_LINKS } from "../../data";
 import { useTypewriter } from "../../hooks/useTypewriter";
 
 interface HeroProps {
@@ -11,11 +11,13 @@ function useWindowWidth() {
   const [width, setWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200
   );
+
   useEffect(() => {
     const handler = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handler);
     return () => window.removeEventListener("resize", handler);
   }, []);
+
   return width;
 }
 
@@ -26,10 +28,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   const isMobile = width < 640;
   const isTablet = width >= 640 && width < 1024;
   const isDesktop = width >= 1024;
-
-  // Orbit visual scales down on smaller screens
-  const orbitSize = isMobile ? 220 : isTablet ? 280 : 340;
-  const orbitCenter = orbitSize / 2;
 
   return (
     <section
@@ -46,7 +44,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: isMobile ? "40px 16px" : isTablet ? "60px 32px" : "80px 24px",
+          padding: isMobile
+            ? "40px 16px"
+            : isTablet
+            ? "60px 32px"
+            : "80px 24px",
           display: "grid",
           gridTemplateColumns: isDesktop ? "1fr 1fr" : "1fr",
           gap: isMobile ? 40 : isTablet ? 48 : 60,
@@ -83,7 +85,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 background: "#00ff87",
                 display: "inline-block",
                 animation: "pulse-ring 1.5s infinite",
-                flexShrink: 0,
               }}
             />
             <span
@@ -129,9 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             }}
           >
             &gt; {typed}
-            <span style={{ animation: "pulse-ring 1s infinite", opacity: 0.8 }}>
-              |
-            </span>
+            <span style={{ animation: "pulse-ring 1s infinite" }}>|</span>
           </div>
 
           <p
@@ -170,13 +169,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 fontWeight: 700,
                 cursor: "pointer",
                 boxShadow: "0 0 30px rgba(0,255,135,0.3)",
-                transition: "all 0.3s",
                 width: isMobile ? "100%" : "auto",
                 maxWidth: isMobile ? 280 : "none",
               }}
             >
               View Projects →
             </button>
+
             <button
               onClick={() => onNavigate("Contact")}
               style={{
@@ -188,7 +187,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 fontSize: isMobile ? 14 : 15,
                 fontWeight: 600,
                 cursor: "pointer",
-                transition: "all 0.3s",
                 width: isMobile ? "100%" : "auto",
                 maxWidth: isMobile ? 280 : "none",
               }}
@@ -214,7 +212,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   color: "#64748b",
                   fontSize: 22,
                   transition: "color 0.2s",
-                  textDecoration: "none",
                 }}
                 onMouseEnter={(e) =>
                   ((e.currentTarget as HTMLElement).style.color = "#00ff87")
@@ -229,13 +226,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Right — Orbit Visual */}
+        {/* Right — Profile Image */}
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // On mobile/tablet show below text; on desktop show on right
             order: isDesktop ? 1 : -1,
           }}
         >
@@ -243,12 +239,16 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             className="animate-float"
             style={{
               position: "relative",
-              width: orbitSize,
-              height: orbitSize,
-              flexShrink: 0,
+              width: isMobile ? 220 : isTablet ? 280 : 340,
+              height: isMobile ? 220 : isTablet ? 280 : 340,
+              borderRadius: "50%",
+              padding: 4,
+              background:
+                "linear-gradient(135deg, #00ff87, #60a5fa, #a78bfa)",
+              boxShadow: "0 0 40px rgba(0,255,135,0.25)",
             }}
           >
-            {/* Pulse rings */}
+            {/* Glow rings */}
             <div
               style={{
                 position: "absolute",
@@ -268,90 +268,19 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               }}
             />
 
-            {/* Avatar */}
-            <div
+            {/* Profile Image */}
+            <img
+              src="/src/assets/Abhitha.jpeg" // 👉 replace with your image
+              alt="Abhitha K Shaji"
               style={{
-                width: orbitSize,
-                height: orbitSize,
+                width: "100%",
+                height: "100%",
                 borderRadius: "50%",
-                background:
-                  "linear-gradient(135deg, #00ff87, #60a5fa, #a78bfa)",
-                padding: 3,
+                objectFit: "cover",
+                objectPosition: "center-top",
+                background: "#0d1627",
               }}
-            >
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                  background: "#0d1627",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  gap: 8,
-                }}
-              >
-                <span style={{ fontSize: isMobile ? 52 : isTablet ? 64 : 80 }}>
-                  👨‍💻
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'DM Mono'",
-                    fontSize: isMobile ? 9 : 12,
-                    color: "#00ff87",
-                    letterSpacing: 2,
-                  }}
-                >
-                  MERN STACK
-                </span>
-              </div>
-            </div>
-
-            {/* Orbiting Tech Badges — scale distance & size with orbitSize */}
-            {TECH_ORBIT.map(({ icon, label, angle, dist, color }) => {
-              const scaleFactor = orbitSize / 340;
-              const scaledDist = dist * scaleFactor;
-              const badgeSize = isMobile ? 40 : isTablet ? 48 : 56;
-              const rad = (angle * Math.PI) / 180;
-              const x = orbitCenter + scaledDist * Math.cos(rad) - badgeSize / 2;
-              const y = orbitCenter + scaledDist * Math.sin(rad) - badgeSize / 2;
-
-              return (
-                <div
-                  key={label}
-                  style={{
-                    position: "absolute",
-                    left: x,
-                    top: y,
-                    width: badgeSize,
-                    height: badgeSize,
-                    borderRadius: isMobile ? 8 : 12,
-                    background: "#111827",
-                    border: `1px solid ${color}33`,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: isMobile ? 13 : 18,
-                    boxShadow: `0 0 20px ${color}22`,
-                    gap: 2,
-                  }}
-                >
-                  {icon}
-                  <span
-                    style={{
-                      fontSize: isMobile ? 6 : 8,
-                      color,
-                      fontFamily: "'DM Mono'",
-                      letterSpacing: 0.5,
-                    }}
-                  >
-                    {label}
-                  </span>
-                </div>
-              );
-            })}
+            />
           </div>
         </div>
       </div>
