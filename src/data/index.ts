@@ -2,7 +2,12 @@ import { SkillCategory, Project, Experience, Stat, SocialLink } from "../types";
 import { FaShoppingCart, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { LuConstruction, LuSchool } from "react-icons/lu";
 import { MdSell, MdMovie, MdMail } from "react-icons/md";
-import {pro1, pro2, pro3, pro4, pro5, pro6} from "../assets";
+import pro1 from "../../assets/pro1.png";
+import pro2 from "../../assets/pro2.png";
+import pro3 from "../../assets/pro3.png";
+import pro4 from "../../assets/pro4.png";
+import pro5 from "../../assets/pro5.png";
+import pro6 from "../../assets/pro6.png";
 
 export const NAV_LINKS: string[] = [
   "Home",

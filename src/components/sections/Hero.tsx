@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HERO_ROLES, SOCIAL_LINKS } from "../../data";
 import { useTypewriter } from "../../hooks/useTypewriter";
-import profile from "../../assets/Abhitha.jpeg"
+import profile from "../../../assets/Abhitha.jpeg"
 
 interface HeroProps {
   onNavigate: (section: string) => void;
