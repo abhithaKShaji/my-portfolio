@@ -2,6 +2,7 @@ import { SkillCategory, Project, Experience, Stat, SocialLink } from "../types";
 import { FaShoppingCart, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { LuConstruction, LuSchool } from "react-icons/lu";
 import { MdSell, MdMovie, MdMail } from "react-icons/md";
+import {pro1, pro2, pro3, pro4, pro5, pro6} from "../assets";
 
 export const NAV_LINKS: string[] = [
   "Home",
@@ -45,7 +46,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://ecommerceshopycart.netlify.app/",
     github: "https://github.com/abhithaKShaji/E-Commerce-ShopyCart.git",
-    thumbnail: "/src/assets/pro1.png",
+    thumbnail: {pro1},
     year: "2024",
   }, 
   {
@@ -57,7 +58,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
     github: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
-    thumbnail: "/src/assets/pro2.png",
+    thumbnail: {pro2},
     year: "2024",
   },
   {
@@ -69,7 +70,7 @@ export const PROJECTS: Project[] = [
     icon: LuConstruction,
     live: "https://brilliant-gumption-4479e4.netlify.app/",
     github: "https://github.com/abhithaKShaji/ConstructionPage.git",
-    thumbnail: "/src/assets/pro3.png",
+    thumbnail: {pro3},
     year: "2023",
   },
   {
@@ -81,7 +82,7 @@ export const PROJECTS: Project[] = [
     icon: MdSell,
     live: "https://transcendent-axolotl-14c935.netlify.app/",
     github: "https://github.com/abhithaKShaji/olx-clone.git",
-    thumbnail: "/src/assets/pro4.png",
+    thumbnail: {pro4},
     year: "2023",
   },
   {
@@ -93,7 +94,7 @@ export const PROJECTS: Project[] = [
     icon: MdMovie,
     live: "https://jocular-boba-7a40df.netlify.app/",
     github: "https://github.com/abhithaKShaji/Netflix-clone.git",
-    thumbnail: "/src/assets/pro5.png",
+    thumbnail: {pro5},
     year: "2023",
   },
   {
@@ -105,7 +106,7 @@ export const PROJECTS: Project[] = [
     icon: LuSchool,
     live: "https://frolicking-kitten-2c1c14.netlify.app/",
     github: "https://github.com/abhithaKShaji/LandingPage.git",
-    thumbnail: "/src/assets/pro6.png",
+    thumbnail: {pro6},
     year: "2022",
   },
 ];

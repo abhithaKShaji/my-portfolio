@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HERO_ROLES, SOCIAL_LINKS } from "../../data";
 import { useTypewriter } from "../../hooks/useTypewriter";
+import profile from "../../assets/Abhitha.jpeg"
 
 interface HeroProps {
   onNavigate: (section: string) => void;
@@ -270,7 +271,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
             {/* Profile Image */}
             <img
-              src="/src/assets/Abhitha.jpeg" // 👉 replace with your image
+              src={profile} // 👉 replace with your image
               alt="Abhitha K Shaji"
               style={{
                 width: "100%",
