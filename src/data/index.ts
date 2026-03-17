@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://ecommerceshopycart.netlify.app/",
     github: "https://github.com/abhithaKShaji/E-Commerce-ShopyCart.git",
-    thumbnail: {pro1},
+    thumbnail: pro1,
     year: "2024",
   }, 
   {
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     icon: FaShoppingCart,
     live: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
     github: "https://github.com/abhithaKShaji/Ecommerce-Walk-in-Style.git",
-    thumbnail: {pro2},
+    thumbnail: pro2,
     year: "2024",
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     icon: LuConstruction,
     live: "https://brilliant-gumption-4479e4.netlify.app/",
     github: "https://github.com/abhithaKShaji/ConstructionPage.git",
-    thumbnail: {pro3},
+    thumbnail: pro3,
     year: "2023",
   },
   {
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     icon: MdSell,
     live: "https://transcendent-axolotl-14c935.netlify.app/",
     github: "https://github.com/abhithaKShaji/olx-clone.git",
-    thumbnail: {pro4},
+    thumbnail: pro4,
     year: "2023",
   },
   {
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     icon: MdMovie,
     live: "https://jocular-boba-7a40df.netlify.app/",
     github: "https://github.com/abhithaKShaji/Netflix-clone.git",
-    thumbnail: {pro5},
+    thumbnail: pro5,
     year: "2023",
   },
   {
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     icon: LuSchool,
     live: "https://frolicking-kitten-2c1c14.netlify.app/",
     github: "https://github.com/abhithaKShaji/LandingPage.git",
-    thumbnail: {pro6},
+    thumbnail: pro6,
     year: "2022",
   },
 ];
