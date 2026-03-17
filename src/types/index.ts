@@ -17,6 +17,7 @@ export interface Project {
   icon: any;
   live: string;
   github: string;
+  thumbnail: string;
   year: string;
 }
 
