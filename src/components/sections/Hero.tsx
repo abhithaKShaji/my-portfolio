@@ -101,19 +101,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </div>
 
           <h1
-            style={{
-              fontSize: isMobile
-                ? "clamp(28px, 8vw, 40px)"
-                : isTablet
-                ? "clamp(32px, 5vw, 50px)"
-                : "clamp(36px, 5vw, 62px)",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              marginBottom: 16,
-            }}
-          >
-            Hi, I'm <span className="gradient-text">Abhitha K Shaji</span>
-          </h1>
+  style={{
+    fontSize: isMobile
+      ? "clamp(28px, 8vw, 40px)"
+      : isTablet
+      ? "clamp(32px, 5vw, 48px)"
+      : "clamp(32px, 4vw, 52px)", // 🔥 reduced desktop size
+    fontWeight: 800,
+    lineHeight: 1.1,
+    marginBottom: 16,
+    whiteSpace: "nowrap", // ✅ prevents breaking
+  }}
+>
+  Hi, I'm <span className="gradient-text">Abhitha K Shaji</span>
+</h1>
 
           {/* Typewriter */}
           <div
